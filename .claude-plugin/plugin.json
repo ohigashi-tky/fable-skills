@@ -1,0 +1,8 @@
+{
+  "name": "fable-skills",
+  "description": "Work discipline skills that reproduce Fable-class task execution quality (scoping, parallel exploration, adversarial verification, evidence-based validation, outcome-first reporting) on Opus/Sonnet and other models.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ohigashi-tky"
+  }
+}
