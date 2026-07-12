@@ -1,0 +1,21 @@
+{
+  "total_bugs": 8,
+  "line_tolerance": 2,
+  "bugs": [
+    {"line": 18, "id": "B3", "desc": "add_item が既存商品の単価を後から来た値で上書きする(docstringは最初の単価を保持と明記)"},
+    {"line": 24, "id": "B2", "desc": "remove_zero_qty が辞書のイテレーション中に del し RuntimeError"},
+    {"line": 34, "id": "B1", "desc": "apply_coupon の可変デフォルト引数 seen=[] がインスタンス間で共有される"},
+    {"line": 54, "id": "B7", "desc": "shipping の境界が > で、閾値ちょうどのとき送料無料にならない(docstringは以上で無料)"},
+    {"line": 64, "id": "B4", "desc": "top_items が昇順ソートで、高い順ではなく安い順の上位を返す(reverse漏れ)"},
+    {"line": 72, "id": "B5", "desc": "paginate の while i < len(names) - 1 で最後の要素/ページが欠落する"},
+    {"line": 80, "id": "B6", "desc": "split_bill が余り円を捨て、合計が total と一致しない"},
+    {"line": 86, "id": "B8", "desc": "price_equals が float の == 比較で、丸め誤差のある値と一致しない"}
+  ],
+  "neutral_zone": [],
+  "acceptable_extra_findings": [
+    "未登録nameでのKeyError(add_item以外の各メソッド)",
+    "discount/taxがsubtotalを複数回呼ぶ非効率",
+    "qtyやunit_priceの負値・型チェックの欠如"
+  ],
+  "note": "line は buggy 行の代表値。tolerance=±2 行以内に findings.json のエントリがあれば一致とみなす。acceptable_extra_findings に該当する報告は false positive に数えない。それ以外で bugs/neutral のどこにも当たらない行の報告のみ false positive とする。"
+}

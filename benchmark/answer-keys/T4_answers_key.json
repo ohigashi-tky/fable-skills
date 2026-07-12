@@ -1,0 +1,13 @@
+{
+  "note": "各質問、answers.json の値を小文字化・空白除去した文字列が accept のいずれかを部分一致で含めば正解(1.0)。partial があれば 0.5。",
+  "questions": {
+    "q1": {"accept": ["hi"], "reject_if_contains": ["hello","strip"], "canonical": "HI (v2=upperが後勝ちで登録を上書き)"},
+    "q2": {"accept": ["25"], "canonical": "25"},
+    "q3": {"accept": ["3"], "canonical": "3 (最初の1回 + リトライ2回)"},
+    "q4": {"accept": ["例外","raise","raises","error","valueerror","エラー","失敗"], "canonical": "例外(ValueError)になる。4回目成功は最大3回試行に届かない"},
+    "q5": {"accept": ["valueerror"], "partial": ["no","されない","しない","いいえ"], "canonical": "ValueErrorのみ。TypeErrorは再試行されない"},
+    "q6": {"accept": ["safe"], "canonical": "safe (空文字はor判定でfalsy→デフォルト)"},
+    "q7": {"accept": ["8"], "must_also_contain_any": ["int","整数"], "partial": ["8"], "canonical": "8 (int型)"},
+    "q8": {"accept": ["no","しない","いいえ","false","キャッシュしない","伝播"], "canonical": "しない(例外は保存されず伝播する)"}
+  }
+}

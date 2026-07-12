@@ -1,2 +1,2 @@
-run_id,date,task,condition,rep,correctness,verification,report,autonomy,scope,minutes,interventions,completed,notes
-T1-A-1,2026-07-12,T1,A,1,4.0,5.0,4.5,5.0,5.0,12,0,true,例: この行を消して実データを追記
+run_id,date,task,condition,rep,auto,quality,minutes,interventions,completed,notes
+T1-A-1,2026-07-12,T1,A,1,87.5,17,14,0,true,この行を消して実データを追記(auto=grade.sh, quality=任意ブラインド)
